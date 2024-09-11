@@ -2,6 +2,7 @@ package array;
 
 //@author  Tejaswi Allam
 
+//Used to check duplicate Values
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
@@ -11,6 +12,7 @@ public class Array {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//create 2 arrays with size 10
 		int[] arr1 = new int[10];
 		int[] arr2 = new int[10];
 		int maxvalue = 100,minvalue = 10;
@@ -115,6 +117,8 @@ public class Array {
                 }
             }
         }
+        
+        // If no pairs are found return no pairs found.
         
         if (!valuesin) {
             System.out.println("No pairs found.");

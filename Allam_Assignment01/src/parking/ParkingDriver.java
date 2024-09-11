@@ -15,7 +15,7 @@ public class ParkingDriver {
 		int parkingspace;
 		int userinput = 0;
 		VlkParkingLot vlk = new VlkParkingLot();
-		Car car = new Car(model, licensePlate);
+		//Car car = new Car(model, licensePlate);
 		Scanner sc = new Scanner(System.in);
 		while(userinput!= 7)
 		{
@@ -32,7 +32,7 @@ public class ParkingDriver {
 		    model = sc.next();
 		    System.out.print("Enter parking space number (0-99): ");
 		    parkingspace = sc.nextInt();
-		    
+		    Car car = new Car(model, licensePlate);
 		    try {
 		        vlk.parkCar(car, parkingspace);
 		    } catch (Exception e) {
@@ -70,7 +70,8 @@ public class ParkingDriver {
             licensePlate = sc.next();
             int Space = vlk.parkingSpot(licensePlate);
            // int Space = parkingLot.parkingSpot(plateForSpace);
-            System.out.println(Space);
+            //System.out.println(Space);
+            //1Car car1 = new Car(model, licensePlate);
             System.out.println("Parking Space of " + licensePlate + ": " + Space);
         	System.out.println();
             break;
@@ -90,6 +91,9 @@ public class ParkingDriver {
 			vlk.display();
 			System.out.println();
 			break;
+		case 7:
+            System.out.println("Exiting...");
+            break;
 		default: 
 			System.out.println("Invalid option. Please try again.");
 			System.out.println();
@@ -99,7 +103,7 @@ public class ParkingDriver {
 		
 		}
 		sc.close();
-     System.out.println("Exiting...");
+       // System.out.println("Exiting...");
 	}
 
 }
